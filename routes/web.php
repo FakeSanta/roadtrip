@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/roadtrip', [RoadtripController::class, 'index'])->name('roadtrip.index');
     Route::get('/roadtrip/create', [RoadtripController::class, 'create'])->name('roadtrip.create');
     Route::post('/roadtrip/store', [RoadtripController::class, 'store'])->name('roadtrip.store');
-    Route::get('/roadtrip/delete', [RoadtripController::class, 'show'])->name('roadtrip.show');
+    Route::get('/roadtrip/show', [RoadtripController::class, 'show'])->name('roadtrip.show');
     Route::get('/roadtrip/delete', [RoadtripController::class, 'delete'])->name('roadtrip.delete');
 
 });
