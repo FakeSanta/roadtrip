@@ -27,13 +27,17 @@
                                 @csrf
                                 <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add New Rando</button>
                             </form>
+                            <form action="{{ route('roadtrip.show') }}" method="GET">
+                                @csrf
+                                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Delete Rando</button>
+                            </form>
                         </div>
                     @endif
 
-                    <div class="mb-4" id="map" style="width: 100%; height: 500px;"></div>
+                    <div class="mb-4" id="map" style="width: 100%; height: 600px;"></div>
 
                     <script>
-                        var map = L.map('map').setView([46.509132871873994, 11.82789248610971], 8);
+                        var map = L.map('map').setView([46.509132871873994, 9.42789248610971], 7);
 
                         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                             attribution: '© OpenStreetMap contributors'

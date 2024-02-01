@@ -34,4 +34,16 @@ class RoadtripController extends Controller
 
         return redirect()->route("roadtrip.index");
     }
+
+    public function delete($id){
+        $roadtrip = Roadtrip::find($id);
+        $roadtrip->delete();
+
+        return redirect()->route("roadtrip.index");
+    }
+
+    public function show(){
+        $roadtrip = Roadtrip::all();
+        return view("roadtrip.show", compact("roadtrip"));
+    }
 }
