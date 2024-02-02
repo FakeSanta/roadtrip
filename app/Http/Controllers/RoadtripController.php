@@ -43,7 +43,7 @@ class RoadtripController extends Controller
     }
 
     public function show(){
-        $roadtrip = Roadtrip::all();
-        return view("roadtrip.show", compact("roadtrip"));
+        $roadtrips = Roadtrip::all()->sortBy('date');
+        return view("roadtrip.show", compact("roadtrips"));
     }
 }
